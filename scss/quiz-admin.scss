@@ -1,0 +1,198 @@
+//TODO: move the values of these variables in the correct file as per theme
+$black: #0a0a0a;
+$white: #fefefe;
+$dark-gray: #8a8a8a;
+$medium-gray: #e6e4e4;
+$lighter-gray: #f2f2f2;
+$arrow-up-white: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3C!-- Created with Inkscape (http://www.inkscape.org/) --%3E%3Csvg width='300' height='300' viewBox='0 0 79.375 79.375' version='1.1' id='svg5' inkscape:version='1.1.2 (1:1.1+202202050950+0a00cf5339)' sodipodi:docname='drawing.svg' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Csodipodi:namedview id='namedview7' pagecolor='%23ffffff' bordercolor='%23666666' borderopacity='1.0' inkscape:pageshadow='2' inkscape:pageopacity='0.0' inkscape:pagecheckerboard='0' inkscape:document-units='mm' showgrid='false' units='px' width='300px' inkscape:zoom='1.096075' inkscape:cx='337.56813' inkscape:cy='287.84526' inkscape:window-width='2560' inkscape:window-height='1383' inkscape:window-x='1920' inkscape:window-y='33' inkscape:window-maximized='1' inkscape:current-layer='layer1' /%3E%3Cdefs id='defs2' /%3E%3Cg inkscape:label='Layer 1' inkscape:groupmode='layer' id='layer1'%3E%3Cpath id='path1416' style='fill:%23ffffff;stroke:%23ffffff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' d='M 39.68716,5.9921588 7.2410735,33.471597 H 72.133921 Z M 25.354358,33.492576 V 73.423911 H 53.659916 V 33.492576 Z' /%3E%3C/g%3E%3C/svg%3E%0A");
+$arrow-down-white: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3C!-- Created with Inkscape (http://www.inkscape.org/) --%3E%3Csvg width='300' height='300' viewBox='0 0 79.375 79.375' version='1.1' id='svg5' inkscape:version='1.1.2 (1:1.1+202202050950+0a00cf5339)' sodipodi:docname='drawing.svg' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Csodipodi:namedview id='namedview7' pagecolor='%23ffffff' bordercolor='%23666666' borderopacity='1.0' inkscape:pageshadow='2' inkscape:pageopacity='0.0' inkscape:pagecheckerboard='0' inkscape:document-units='mm' showgrid='false' units='px' width='300px' inkscape:zoom='1.096075' inkscape:cx='337.56813' inkscape:cy='287.84526' inkscape:window-width='2560' inkscape:window-height='1383' inkscape:window-x='1920' inkscape:window-y='33' inkscape:window-maximized='1' inkscape:current-layer='layer1' /%3E%3Cdefs id='defs2' /%3E%3Cg inkscape:label='Layer 1' inkscape:groupmode='layer' id='layer1'%3E%3Cpath id='path1416' style='fill:%23ffffff;stroke:%23ffffff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' d='M 39.68716,73.382842 7.2410735,45.903403 H 72.133921 Z M 25.354358,45.882424 V 5.9510894 H 53.659916 V 45.882424 Z' /%3E%3C/g%3E%3C/svg%3E%0A");
+//end variables
+
+.custom-quiz {
+  background-color: #f9f9ff;
+  padding: 5px;
+  border-radius: 5px;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid $dark-gray;
+  }
+
+  &__cover {
+    width: calc(30% - 10px);
+    min-height: 200px;
+    background-color: $white;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+
+    &.no-image {
+      background-color: $dark-gray;
+    }
+  }
+
+  &__text {
+    width: 70%;
+
+    textarea {
+      font-size: 20px;
+      padding: 10px;
+      border: 1px solid $medium-gray;
+      border-radius: 5px;
+    }
+  }
+
+  .custom-quiz__description {
+    height: 100px;
+  }
+}
+
+.quiz-question {
+  background-color: $lighter-gray;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 15px;
+
+  textarea {
+    border: 1px solid $dark-gray;
+    padding: 10px;
+  }
+
+  &__general {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+
+  &__response {
+    display: flex;
+    flex-direction: row;
+
+    textarea {
+      width: calc(50% - 5px);
+      margin-right: 10px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    &-correct {
+      background-color: #f6ffef;
+    }
+    &-incorrect {
+      background-color: #fff0f0;
+    }
+  }
+
+  &__main-image {
+    width: calc(25% - 10px);
+    min-height: 120px;
+    margin-right: 10px;
+    background-color: $white;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &.no-image {
+      background-color: $dark-gray;
+    }
+  }
+
+  &__question {
+    width: calc(70% - 10px);
+    margin-right: 10px;
+
+    textarea {
+      font-size: 20px;
+    }
+  }
+
+  &__index {
+    width: 5%;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  &__current {
+    padding-top: 10px;
+    border-top: 1px solid $dark-gray;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid $medium-gray;
+
+    h3 {
+      width: 100%;
+    }
+
+    &.question-list {
+      h3 {
+        width: calc(5% - 10px);
+        margin-right: 10px;
+      }
+
+      .quiz-question__field-text {
+        width: 75%;
+      }
+    }
+
+    &-image {
+      width: calc(20% - 10px);
+      margin-right: 10px;
+      min-height: 100px;
+      background-color: $white;
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      &.no-image {
+        background-color: $medium-gray;
+      }
+    }
+
+    &-text {
+      width: 80%;
+
+      textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      button {
+        margin-right: 5px;
+      }
+
+      .answer-navigation {
+        color: transparent;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        &:hover, &:focus, &:active {
+          color: transparent;
+        }
+
+        &.answer-nav-down {
+          background-image: $arrow-down-white;
+        }
+
+        &.answer-nav-up {
+          background-image: $arrow-up-white;
+        }
+      }
+    }
+  }
+}
